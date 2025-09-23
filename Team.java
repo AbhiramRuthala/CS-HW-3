@@ -106,13 +106,14 @@ public class Team {
     public boolean onTeam(String nameSeason){
         boolean sense = false;
         for(int i = 0; i < Team.length; i++){
-            if(Team[i].name.equals(nameSeason)){
+            if(Team[i].name.contains(nameSeason)) {
                 sense = true;
-                //return true;
-            } else{
-                sense = false;
-               // return false;
             }
+                //return true;}
+//            } else{
+//                sense = false;
+//               // return false;
+//            }
         }
 
         return sense;
