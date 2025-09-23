@@ -1,3 +1,8 @@
+// Name: Abhiram Ruthala
+// Computing Id:kas4kj
+// HW 3 - Soccer
+// Resources used: https://medium.com/@AlexanderObregon/introduction-to-sorting-algorithms-in-java-a-beginners-guide-db522047effb, https://www.geeksforgeeks.org/dsa/sorting-algorithms/, ChatGPT 4 for Debugging
+
 public class Player {
     String name;
     String position;
