@@ -12,12 +12,12 @@ public class Player {
     double sog_percentage;
 
     public Player(){
-        name = "Bob";
-        position = "CB";
-        minutes_played = 13;
-        goals = 15;
-        assists = 25;
-        sog_percentage = 2.5;
+        name = "";
+        position = "";
+        minutes_played = 0;
+        goals = 0;
+        assists = 0;
+        sog_percentage = 0.0;
     }
 
     public Player(String name, String position, int minutes_played, int goals, int assists, double sog_percentage) {
