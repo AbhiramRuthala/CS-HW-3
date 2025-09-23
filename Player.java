@@ -1,8 +1,3 @@
-// Name: Abhiram Ruthala
-// Computing Id:kas4kj
-// HW 3 - Soccer
-// Resources used: https://medium.com/@AlexanderObregon/introduction-to-sorting-algorithms-in-java-a-beginners-guide-db522047effb, https://www.geeksforgeeks.org/dsa/sorting-algorithms/
-
 public class Player {
     String name;
     String position;
@@ -10,15 +5,6 @@ public class Player {
     int goals;
     int assists;
     double sog_percentage;
-
-    public Player(){
-        name = "";
-        position = "";
-        minutes_played = 0;
-        goals = 0;
-        assists = 0;
-        sog_percentage = 0.0;
-    }
 
     public Player(String name, String position, int minutes_played, int goals, int assists, double sog_percentage) {
         this.name = name;
@@ -67,17 +53,14 @@ public class Player {
         return name + position + minutes_played + goals + assists + sog_percentage;
     }
 
-    public boolean equals(Player other){
-        boolean sense = false;
-        if (name.equals(other.getName()) && position.equals(other.getPosition()) && minutes_played == other.getMinutes() && sog_percentage == other.getSOG()){
-            sense = true;
-            return true;
-        } else {
-            sense = false;
-            return false;
-        }
-
-        //return sense;
+    @Override
+    public boolean equals(Object other){
+        return super.equals(other);
+//        if (name.equals(other.getName()) && position.equals(other.getPosition()) && minutes_played == other.getMinutes() && sog_percentage == other.getSOG()){
+//            return true;
+//        } else {
+//            return false;
+//        }
 
     }
 
