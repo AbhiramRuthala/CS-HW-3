@@ -7,8 +7,8 @@ public class Team {
 
     Player[] Team;
 
-    public Team(Player[] DallasMavs){
-        this.Team = DallasMavs;
+    public Team(Player[] Team){
+        this.Team = Team;
 
     }
 
