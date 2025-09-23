@@ -64,7 +64,7 @@ public class Player {
 
     @Override
     public String toString(){
-        return name + position + minutes_played + goals + assists + sog_percentage;
+        return name + " " + position + " " + minutes_played + " " + goals + " " + assists + " " + sog_percentage;
     }
 
     @Override
