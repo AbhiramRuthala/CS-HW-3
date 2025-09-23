@@ -77,7 +77,7 @@ public class Player {
             return false;
         }
 
-        return sense;
+        //return sense;
 
     }
 
