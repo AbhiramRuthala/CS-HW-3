@@ -15,7 +15,7 @@ public class Team {
     public Player[] getTeam() {
         return Team;
     }
-    public void SetTeam(Player[] Team) {
+    public void setTeam(Player[] Team) {
         this.Team = Team;
     }
 
