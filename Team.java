@@ -7,8 +7,8 @@ public class Team {
 
     Player[] Team;
 
-    public Team(Player[] Team){
-        this.Team = Team;
+    public Team(Player[] team){
+        this.Team = team.clone();
 
     }
 
@@ -50,8 +50,6 @@ public class Team {
         for(int i = 0; i < Team.length; i++){
             if(Team[i].position.equals(positionValue)){
                 counter++;
-            } else {
-                counter = 0;
             }
         }
 
@@ -74,7 +72,7 @@ public class Team {
 //        Player maxValue = new Player();
 //        int maxSeason = 0;
         int season = 0;
-        Player[] newList = Team;
+        Player[] newList = Team.clone();
         for(int i = 0; i < Team.length-1; i++){
             if(newList[i].minutes_played < newList[i+1].minutes_played){
                 season = newList[i+1].minutes_played;
