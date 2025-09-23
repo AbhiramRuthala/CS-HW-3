@@ -68,11 +68,16 @@ public class Player {
     }
 
     public boolean equals(Player other){
+        boolean sense = false;
         if (name.equals(other.getName()) && position.equals(other.getPosition()) && minutes_played == other.getMinutes() && sog_percentage == other.getSOG()){
+            sense = true;
             return true;
         } else {
+            sense = false;
             return false;
         }
+
+        return sense;
 
     }
 
