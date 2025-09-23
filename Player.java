@@ -6,6 +6,15 @@ public class Player {
     int assists;
     double sog_percentage;
 
+    public Player(){
+        name = "";
+        position = "";
+        minutes_played = 0;
+        goals = 0;
+        assists = 0;
+        sog_percentage = 0.0;
+    }
+
     public Player(String name, String position, int minutes_played, int goals, int assists, double sog_percentage) {
         this.name = name;
         this.position = position;
