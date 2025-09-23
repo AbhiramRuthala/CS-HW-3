@@ -58,19 +58,19 @@ public class Team {
         return counter;
     }
 
+//    public Player[] sort(){
+//        Player[] newList = new Player[Team.length];
+//        for(int i = 0; i < Team.length-1; i++){
+//            if(Team[i].minutes_played > Team[i+1].minutes_played){
+//                newList[0] = Team[i];
+//            }
+//        }
+//
+//        return newList;
+//
+//    }
+
     public Player[] sort(){
-        Player[] newList = new Player[Team.length];
-        for(int i = 0; i < Team.length-1; i++){
-            if(Team[i].minutes_played > Team[i+1].minutes_played){
-                newList[0] = Team[i];
-            }
-        }
-
-        return newList;
-
-    }
-
-    public Player[] sortByMinutes(){
 //        Player maxValue = new Player();
 //        int maxSeason = 0;
         int season = 0;
