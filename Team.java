@@ -43,10 +43,10 @@ public class Team {
     }
 
     //equals method
-    // @Override
-    // public boolean equals(Object other) {
-    //     return super.equals(other);
-    // }
+    @Override
+    public boolean equals(Object other) {
+        return super.equals(other);
+    }
 
     @Override
     public String toString() {
@@ -94,7 +94,8 @@ public class Team {
     public Player[] sort(){
 //        Player maxValue = new Player();
 //        int maxSeason = 0;
-        int season = 0;
+        Player season;
+        Player otherValue;
         Player[] newList = new Player[Team.length];
         for(int i = 0; i < Team.length-1; i++){
             newList[i] = Team[i];
@@ -107,11 +108,11 @@ public class Team {
         for(int x = 0; x < newList.length -1; x++){
             for(int j = 0; j < newList.length-x-1; j++){
                 if(newList[j].getMinutes() < newList[j+1].getMinutes()){
-//                    int newseason = newList[j+1].getMinutes();
-//                    int otherValue = 0;
-//                    otherValue = newList[j].getMinutes();
-//                    
-//                    newList[j].getMinutes() = newseason;
+                    season = newList[j+1];
+//                    otherValue = newList[j];
+                    newList[j+1] = newList[j];
+                    newList[j] = season;
+                    
                 }
 
             }
