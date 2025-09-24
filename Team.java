@@ -39,7 +39,7 @@ public class Team {
         Player[] FC = new Player[team.length];
 
         for(int i = 0; i < team.length; i++){
-            FC[i] = Team[i];
+            FC[i] = team[i];
 
         }
         this.Team = FC;
