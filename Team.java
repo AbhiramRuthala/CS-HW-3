@@ -8,7 +8,7 @@ public class Team {
     private Player[] Team;
 
     public Team(Player[] team){
-        if(Team.length >0) {
+        //if(Team.length >0) {
             Player[] FC = new Player[team.length];
 
             //FC.getClass().getName();
@@ -19,7 +19,7 @@ public class Team {
             }
             this.Team = FC;
             
-        }
+        //}
         
 
 //        if(team == null){
