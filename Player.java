@@ -69,7 +69,7 @@ public class Player {
         return name + " " + position + " " + minutes_played + " " + goals + " " + assists + " " + sog_percentage;
     }
 
-    @Override
+    // @Override
     public boolean equals(Player other){
         // return super.equals(other);
        if (name.equals(other.getName()) && position.equals(other.getPosition()) && minutes_played == other.getMinutes() && sog_percentage == other.getSOG()){
