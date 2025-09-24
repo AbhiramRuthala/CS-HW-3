@@ -8,11 +8,11 @@ public class Team {
     private Player[] Team;
 
     public Team(Player[] team){
-        Player[] FC = new Player[team.length];
+        //Player[] FC = new Player[team.length];
         if(team == null){
             this.Team = new Player[team.length];
         } else {
-            this.Team = FC;
+            this.Team = team;
         }
 
     }
