@@ -111,7 +111,7 @@ public class Team {
         Player season;
         Player otherValue;
         Player[] newList = new Player[Team.length];
-        for(int i = 0; i < Team.length-1; i++){
+        for(int i = 0; i < Team.length; i++){
             newList[i] = Team[i];
         }
         // if(newList[i].minutes_played < newList[i+1].minutes_played){
@@ -126,7 +126,7 @@ public class Team {
 //                    otherValue = newList[j];
                     newList[j+1] = newList[j];
                     newList[j] = season;
-                    
+
                 }
 
             }
