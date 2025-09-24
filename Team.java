@@ -72,7 +72,7 @@ public class Team {
 //        Player maxValue = new Player();
 //        int maxSeason = 0;
         int season = 0;
-        Player[] newList = new Player[Team.size];
+        Player[] newList = new Player[Team.length];
         for(int i = 0; i < Team.length-1; i++){
             newList[i] = Team[i];
         }
