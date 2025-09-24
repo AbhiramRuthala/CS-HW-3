@@ -8,10 +8,11 @@ public class Team {
     private Player[] Team;
 
     public Team(Player[] team){
+        Player[] FC = new Player[team.length];
         if(team == null){
-            this.Team = new Player[0];
+            this.Team = new Player[team.length];
         } else {
-            this.Team = team.clone();
+            this.Team = FC;
         }
 
     }
