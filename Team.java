@@ -5,7 +5,7 @@
 
 public class Team {
 
-    Player[] Team;
+    private Player[] Team;
 
     public Team(Player[] team){
         if(team == null){
@@ -19,14 +19,17 @@ public class Team {
     public Player[] getTeam() {
         return Team.clone();
     }
-    
+
     public void setTeam(Player[] team) {
         for(int i = 0; i < team.length; i++){
             Team[i] = team[i];
-            
+
         }
         this.Team = team;
+
+        //this.Team = team;
     }
+
     //equals method
     @Override
     public boolean equals(Object other) {
@@ -84,11 +87,11 @@ public class Team {
         for(int i = 0; i < Team.length-1; i++){
             newList[i] = Team[i];
         }
-            // if(newList[i].minutes_played < newList[i+1].minutes_played){
-            //     season = newList[i+1].minutes_played;
-            //     newList[i+1].minutes_played = newList[i].minutes_played;
-            //     newList[i].minutes_played = season;
-            // }
+        // if(newList[i].minutes_played < newList[i+1].minutes_played){
+        //     season = newList[i+1].minutes_played;
+        //     newList[i+1].minutes_played = newList[i].minutes_played;
+        //     newList[i].minutes_played = season;
+        // }
         for(int x = 0; x < newList.length -1; x++){
             for(int j = 0; j < newList.length-x-1; j++){
                 if(newList[j].minutes_played < newList[j+1].minutes_played){
@@ -110,7 +113,7 @@ public class Team {
             if(Team[i].name.equals(nameSeason)) {
                 sense = true;
             }
-                //return true;}
+            //return true;}
 //            } else{
 //                sense = false;
 //               // return false;
