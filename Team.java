@@ -7,19 +7,24 @@ public class Team {
 
     private Player[] Team;
 
-    public Team(Player[] Team){
-        //if(Team.length >0) {
-            Player[] FC = new Player[Team.length];
+    public Team(Player[] team){
+        Player[] FC = new Player[team.length];
+        FC.getClass().getName();
 
-            //FC.getClass().getName();
+        for(int i = 0; i < team.length; i++){
+            FC[i] = team[i];
 
-            for(int i = 0; i < Team.length; i++){
-                FC[i] = Team[i];
-
-            }
-            this.Team = FC;
             
-        //}
+            
+
+        }
+
+            if(FC[0] == team[0]){
+                this.Team = FC;
+            } else {
+                this.Team = team.clone();
+            }
+                
         
 
 //        if(team == null){
@@ -34,11 +39,11 @@ public class Team {
         return Team.clone();
     }
 
-    public void setTeam(Player[] Team) {
+    public void setTeam(Player[] team) {
         //deep copy
-        Player[] FC = new Player[Team.length];
+        Player[] FC = new Player[team.length];
 
-        for(int i = 0; i < Team.length; i++){
+        for(int i = 0; i < team.length; i++){
             FC[i] = Team[i];
 
         }
@@ -121,7 +126,7 @@ public class Team {
 //                    otherValue = newList[j];
                     newList[j+1] = newList[j];
                     newList[j] = season;
-
+                    
                 }
 
             }
