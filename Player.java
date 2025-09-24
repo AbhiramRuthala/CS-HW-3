@@ -38,7 +38,9 @@ public class Player {
 
     }
     public void setPosition(String position){
-        this.position = position;
+        if (position.equals("defense") || position.equals("goalie") || position.equals("midfield") || position.equals("forward")){
+            this.position = position;
+        }
 
     }
 
