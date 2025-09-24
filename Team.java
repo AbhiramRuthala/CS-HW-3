@@ -19,7 +19,7 @@ public class Team {
 
         }
 
-            if(FC[i] = team[i]){
+            if(FC[0] = team[0]){
                 this.Team = FC;
             } else {
                 this.Team = team.clone();
