@@ -38,11 +38,12 @@ public class Player {
 
     }
     public void setPosition(String position){
-        if (position.toUpperCase().equals("defense") || position.toUpperCase().equals("goalie") || position.toUpperCase().equals("midfield") || position.toUpperCase().equals("forward")){
+        if (position.equals("defense") || position.equals("goalie") || position.equals("midfield") || position.equals("forward")){
             this.position = position;
         }
 
     }
+
 
 
     public String getPosition(){
