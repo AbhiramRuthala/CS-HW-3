@@ -21,7 +21,7 @@ public class Team {
     }
     
     public void setTeam(Player[] Team) {
-        this.Team = Team;
+        this.Team = Team.clone();
     }
 
     //equals method
