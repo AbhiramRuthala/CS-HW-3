@@ -43,10 +43,10 @@ public class Team {
     }
 
     //equals method
-    @Override
-    public boolean equals(Object other) {
-        return super.equals(other);
-    }
+    // @Override
+    // public boolean equals(Object other) {
+    //     return super.equals(other);
+    // }
 
     @Override
     public String toString() {
