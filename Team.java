@@ -72,33 +72,26 @@ public class Team {
 //        Player maxValue = new Player();
 //        int maxSeason = 0;
         int season = 0;
-        Player[] newList = Team.clone();
+        Player[] newList = new Player[Team.size];
         for(int i = 0; i < Team.length-1; i++){
-            if(newList[i].minutes_played < newList[i+1].minutes_played){
-                season = newList[i+1].minutes_played;
-                newList[i+1].minutes_played = newList[i].minutes_played;
-                newList[i].minutes_played = season;
-            }
-            for(int j = 0; j < Team.length-1; j++){
+            newList[i] = Team[i];
+        }
+            // if(newList[i].minutes_played < newList[i+1].minutes_played){
+            //     season = newList[i+1].minutes_played;
+            //     newList[i+1].minutes_played = newList[i].minutes_played;
+            //     newList[i].minutes_played = season;
+            // }
+        for(int x = 0; x < newList.length -1; x++){
+            for(int j = 0; j < newList.length-x-1; j++){
                 if(newList[j].minutes_played < newList[j+1].minutes_played){
                     int newseason = newList[j+1].minutes_played;
                     newList[j+1].minutes_played = newList[j].minutes_played;
                     newList[j].minutes_played = newseason;
                 }
-                for(int k = 0; k < Team.length-1; k++){
-                    if(newList[k].minutes_played < newList[k+1].minutes_played){
-                        season = newList[k+1].minutes_played;
-                        newList[k+1].minutes_played = newList[k].minutes_played;
-                        newList[k].minutes_played = season;
-                    }
-
-                }
 
             }
 
         }
-
-//        newList[0] = maxValue;
 
         return newList;
     }
