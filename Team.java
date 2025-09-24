@@ -20,10 +20,13 @@ public class Team {
         return Team.clone();
     }
     
-    public void setTeam(Player[] Team) {
-        this.Team = Team.clone();
+    public void setTeam(Player[] team) {
+        for(int i = 0; i < team.length; i++){
+            Team[i] = team[i];
+            
+        }
+        this.Team[i] = team[i];
     }
-
     //equals method
     @Override
     public boolean equals(Object other) {
