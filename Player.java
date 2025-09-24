@@ -22,11 +22,24 @@ public class Player {
 
     public Player(String name, String position, int minutes_played, int goals, int assists, double sog_percentage) {
         this.name = name;
-        this.position = position;
-        this.minutes_played = minutes_played;
-        this.goals = goals;
-        this.assists = assists;
-        this.sog_percentage = sog_percentage;
+        setPosition(position);
+
+        if(minutes_played > 0){
+            this.minutes_played = minutes_played;
+        }
+
+        if (goals > 0){
+            this.goals = goals;
+        }
+
+        if  (assists > 0){
+            this.assists = assists;
+            
+        }
+        
+        if  (sog_percentage > 0) {
+            this.sog_percentage = sog_percentage;
+        }
 
     }
 
@@ -43,8 +56,6 @@ public class Player {
         }
 
     }
-
-
 
     public String getPosition(){
         return position;
@@ -74,7 +85,7 @@ public class Player {
     // @Override
     public boolean equals(Player other){
         // return super.equals(other);
-        if (name.equals(other.getName()) && position.equals(other.getPosition()) && assists == other.getAssists() && minutes_played == other.getMinutes() && sog_percentage == other.getSOG()){
+        if (name.equals(other.getName()) && position.equals(other.getPosition()) && minutes_played == other.getMinutes() && sog_percentage == other.getSOG()){
             return true;
         } else {
             return false;
