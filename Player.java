@@ -72,11 +72,11 @@ public class Player {
     // @Override
     public boolean equals(Player other){
         // return super.equals(other);
-       if (name.equals(other.getName()) && position.equals(other.getPosition()) && minutes_played == other.getMinutes() && sog_percentage == other.getSOG()){
-           return true;
-       } else {
-           return false;
-       }
+        if (name.equals(other.getName()) && position.equals(other.getPosition()) && assists == other.getAssists() && minutes_played == other.getMinutes() && sog_percentage == other.getSOG()){
+            return true;
+        } else {
+            return false;
+        }
 
     }
 
