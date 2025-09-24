@@ -7,14 +7,14 @@ public class Team {
 
     private Player[] Team;
 
-    public Team(Player[] team){
+    public Team(Player[] Team){
         //if(Team.length >0) {
-            Player[] FC = new Player[team.length];
+            Player[] FC = new Player[Team.length];
 
             //FC.getClass().getName();
 
-            for(int i = 0; i < team.length; i++){
-                FC[i] = team[i];
+            for(int i = 0; i < Team.length; i++){
+                FC[i] = Team[i];
 
             }
             this.Team = FC;
@@ -34,12 +34,12 @@ public class Team {
         return Team.clone();
     }
 
-    public void setTeam(Player[] team) {
+    public void setTeam(Player[] Team) {
         //deep copy
-        Player[] FC = new Player[team.length];
+        Player[] FC = new Player[Team.length];
 
-        for(int i = 0; i < team.length; i++){
-            FC[i] = team[i];
+        for(int i = 0; i < Team.length; i++){
+            FC[i] = Team[i];
 
         }
         this.Team = FC;
