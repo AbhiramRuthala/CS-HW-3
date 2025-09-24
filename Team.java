@@ -97,12 +97,14 @@ public class Team {
         //     newList[i].minutes_played = season;
         // }
         for(int x = 0; x < newList.length -1; x++){
-            for(int j = 0; j < newList.length-x-1; j++){
-                if(newList[j].minutes_played < newList[j+1].minutes_played){
-                    int newseason = newList[j+1].minutes_played;
-                    newList[j+1].minutes_played = newList[j].minutes_played;
-                    newList[j].minutes_played = newseason;
-                }
+            //for(int j = 0; j < newList.length-x-1; j++){
+                while(newList[x].minutes_played < newList[x+1].minutes_played){
+                    season = newList[x+1].minutes_played;
+                    newList[x+1].minutes_played = newList[x].minutes_played;
+                    newList[x].minutes_played = season;
+
+                    
+               // }
 
             }
 
