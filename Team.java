@@ -8,23 +8,18 @@ public class Team {
     private Player[] Team;
 
     public Team(Player[] team){
-        Player[] FC = new Player[team.length];
-        FC.getClass().getName();
+        if(Team.length >0) {
+            Player[] FC = new Player[team.length];
 
-        for(int i = 0; i < team.length; i++){
-            FC[i] = team[i];
+            //FC.getClass().getName();
 
-            
-            
+            for(int i = 0; i < team.length; i++){
+                FC[i] = team[i];
 
-        }
-
-            if(FC[0] == team[0]){
-                this.Team = FC;
-            } else {
-                this.Team = team.clone();
             }
-                
+            this.Team = FC;
+            
+        }
         
 
 //        if(team == null){
@@ -126,7 +121,7 @@ public class Team {
 //                    otherValue = newList[j];
                     newList[j+1] = newList[j];
                     newList[j] = season;
-                    
+
                 }
 
             }
