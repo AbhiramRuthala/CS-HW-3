@@ -4,12 +4,12 @@
 // Resources used: https://medium.com/@AlexanderObregon/introduction-to-sorting-algorithms-in-java-a-beginners-guide-db522047effb, https://www.geeksforgeeks.org/dsa/sorting-algorithms/, ChatGPT 4 for Debugging
 
 public class Player {
-    String name;
-    String position;
-    int minutes_played;
-    int goals;
-    int assists;
-    double sog_percentage;
+    private String name;
+    private String position;
+    private int minutes_played;
+    private int goals;
+    private int assists;
+    private double sog_percentage;
 
     public Player(){
         name = "";
