@@ -25,7 +25,7 @@ public class Team {
             Team[i] = team[i];
             
         }
-        this.Team[i] = team[i];
+        this.Team = team;
     }
     //equals method
     @Override
