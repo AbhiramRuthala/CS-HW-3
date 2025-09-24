@@ -12,7 +12,7 @@ public class Team {
         FC.getClass().getName();
 
         for(int i = 0; i < team.length; i++){
-            FC[i] = team[i]
+            FC[i] = team[i];
 
             
             
