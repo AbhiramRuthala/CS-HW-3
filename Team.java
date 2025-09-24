@@ -86,7 +86,11 @@ public class Team {
             }
         }
 
-        return counter;
+        if (counter > 0) {
+            return counter;
+        } else {
+            return 0;
+        }
     }
 
 //    public Player[] sort(){
