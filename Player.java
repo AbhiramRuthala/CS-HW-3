@@ -70,13 +70,13 @@ public class Player {
     }
 
     @Override
-    public boolean equals(Object other){
-        return super.equals(other);
-//        if (name.equals(other.getName()) && position.equals(other.getPosition()) && minutes_played == other.getMinutes() && sog_percentage == other.getSOG()){
-//            return true;
-//        } else {
-//            return false;
-//        }
+    public boolean equals(Player other){
+        // return super.equals(other);
+       if (name.equals(other.getName()) && position.equals(other.getPosition()) && minutes_played == other.getMinutes() && sog_percentage == other.getSOG()){
+           return true;
+       } else {
+           return false;
+       }
 
     }
 
