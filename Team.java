@@ -1,5 +1,5 @@
 // Name: Abhiram Ruthala
-// Computing Id:kas4kj
+// Computing ID: kas4kj
 // HW 3 - Soccer
 // Resources used: https://medium.com/@AlexanderObregon/introduction-to-sorting-algorithms-in-java-a-beginners-guide-db522047effb, https://www.geeksforgeeks.org/dsa/sorting-algorithms/, ChatGPT 4 for Debugging, Claude Sonnet 4 for Debugging
 
@@ -8,12 +8,20 @@ public class Team {
     private Player[] Team;
 
     public Team(Player[] team){
-        //Player[] FC = new Player[team.length];
-        if(team == null){
-            this.Team = new Player[team.length];
-        } else {
-            this.Team = team;
+        Player[] FC = new Player[team.length];
+        FC.getClass().getName();
+
+        for(int i = 0; i < team.length; i++){
+            FC[i] = team[i];
+
         }
+        this.Team = FC;
+
+//        if(team == null){
+//            this.Team = new Player[0];
+//        } else {
+//            this.Team = team.clone();
+//        }
 
     }
 
@@ -24,7 +32,7 @@ public class Team {
     public void setTeam(Player[] team) {
         //deep copy
         Player[] FC = new Player[team.length];
-        
+
         for(int i = 0; i < team.length; i++){
             FC[i] = Team[i];
 
@@ -44,7 +52,7 @@ public class Team {
     public String toString() {
         String str = "";
         for(int i = 0; i < Team.length; i++){
-            str = Team[i].name + Team[i].position + Team[i].minutes_played + Team[i].assists + Team[i].goals + Team[i].sog_percentage;
+            str = Team[i].getName() + Team[i].getPosition() + Team[i].getMinutes() + Team[i].getAssists() + Team[i].getGoals() + Team[i].getSOG();
             //return Team[i].name + Team[i].position + Team[i].minutes_played + Team[i].assists + Team[i].goals + Team[i].sog_percentage;
         }
 
@@ -54,7 +62,7 @@ public class Team {
     public double SOGAverage(){
         double numerator = 0;
         for(int i = 0; i < Team.length; i++){
-            numerator += Team[i].sog_percentage;
+            numerator += Team[i].getSOG();
         }
 
         return numerator/Team.length;
@@ -63,7 +71,7 @@ public class Team {
     public int positionCount(String positionValue){
         int counter = 0;
         for(int i = 0; i < Team.length; i++){
-            if(Team[i].position.equals(positionValue)){
+            if(Team[i].getPosition().equals(positionValue)){
                 counter++;
             }
         }
@@ -97,14 +105,14 @@ public class Team {
         //     newList[i].minutes_played = season;
         // }
         for(int x = 0; x < newList.length -1; x++){
-            //for(int j = 0; j < newList.length-x-1; j++){
-                while(newList[x].minutes_played < newList[x+1].minutes_played){
-                    season = newList[x+1].minutes_played;
-                    newList[x+1].minutes_played = newList[x].minutes_played;
-                    newList[x].minutes_played = season;
-
-                    
-               // }
+            for(int j = 0; j < newList.length-x-1; j++){
+                if(newList[j].getMinutes() < newList[j+1].getMinutes()){
+//                    int newseason = newList[j+1].getMinutes();
+//                    int otherValue = 0;
+//                    otherValue = newList[j].getMinutes();
+//                    
+//                    newList[j].getMinutes() = newseason;
+                }
 
             }
 
@@ -116,7 +124,7 @@ public class Team {
     public boolean onTeam(String nameSeason){
         boolean sense = false;
         for(int i = 0; i < Team.length; i++){
-            if(Team[i].name.equals(nameSeason)) {
+            if(Team[i].getName().equals(nameSeason)) {
                 sense = true;
             }
             //return true;}
@@ -134,11 +142,11 @@ public class Team {
         Player newPlayer = null;
         int playerChoiceGoals = 0;
         for(int i = 0; i < Team.length; i++){
-            playerChoiceGoals = Team[i].goals;
+            playerChoiceGoals = Team[i].getGoals();
             if(playerChoiceGoals > goals){
                 goals = playerChoiceGoals;
             }
-            if(Team[i].goals == goals){
+            if(Team[i].getGoals() == goals){
                 newPlayer = Team[i];
             }
         }
@@ -158,9 +166,9 @@ public class Team {
 //        }
 
         for(Player player : Team){
-            System.out.println(player.name);
+            System.out.println(player.getName());
             for(int x = 0; x < thuggers.length; x++){
-                if(thuggers[x].getName().contains(player.name)){
+                if(thuggers[x].getName().contains(player.getName())){
                     counter++;
                 }
             }
