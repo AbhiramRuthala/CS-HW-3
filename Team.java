@@ -81,10 +81,17 @@ public class Team {
     public int positionCount(String positionValue){
         int counter = 0;
         for(int i = 0; i < Team.length; i++){
-            if(Team[i].getPosition().equals(positionValue)){
+            if(Team[i].getPosition().equalsIgnoreCase(positionValue.toLowerCase())){
                 counter++;
             }
         }
+        if (counter > 0) {
+            return counter;
+        } else {
+            return 0;
+        }
+        //return counter;
+    }
 
         if (counter > 0) {
             return counter;
