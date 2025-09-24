@@ -22,7 +22,7 @@ public class Team {
 
     public void setTeam(Player[] team) {
         //deep copy
-        Player[] FC = new Player[];
+        Player[] FC = new Player[team.length];
         
         for(int i = 0; i < team.length; i++){
             FC[i] = Team[i];
