@@ -21,11 +21,14 @@ public class Team {
     }
 
     public void setTeam(Player[] team) {
+        //deep copy
+        Player[] FC = new Player[];
+        
         for(int i = 0; i < team.length; i++){
-            Team[i] = team[i];
+            FC[i] = Team[i];
 
         }
-        this.Team = team;
+        this.Team = FC;
 
         //this.Team = team;
     }
