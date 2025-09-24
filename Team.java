@@ -1,20 +1,25 @@
 // Name: Abhiram Ruthala
 // Computing Id:kas4kj
 // HW 3 - Soccer
-// Resources used: https://medium.com/@AlexanderObregon/introduction-to-sorting-algorithms-in-java-a-beginners-guide-db522047effb, https://www.geeksforgeeks.org/dsa/sorting-algorithms/, ChatGPT 4 for Debugging
+// Resources used: https://medium.com/@AlexanderObregon/introduction-to-sorting-algorithms-in-java-a-beginners-guide-db522047effb, https://www.geeksforgeeks.org/dsa/sorting-algorithms/, ChatGPT 4 for Debugging, Claude Sonnet 4 for Debugging
 
 public class Team {
 
     Player[] Team;
 
     public Team(Player[] team){
-        this.Team = team.clone();
+        if(team == null){
+            this.Team = new Player[0];
+        } else {
+            this.Team = team.clone();
+        }
 
     }
 
     public Player[] getTeam() {
-        return Team;
+        return Team.clone();
     }
+    
     public void setTeam(Player[] Team) {
         this.Team = Team;
     }
