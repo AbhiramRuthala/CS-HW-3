@@ -93,13 +93,6 @@ public class Team {
         //return counter;
     }
 
-        if (counter > 0) {
-            return counter;
-        } else {
-            return 0;
-        }
-    }
-
 //    public Player[] sort(){
 //        Player[] newList = new Player[Team.length];
 //        for(int i = 0; i < Team.length-1; i++){
