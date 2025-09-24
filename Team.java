@@ -12,10 +12,20 @@ public class Team {
         FC.getClass().getName();
 
         for(int i = 0; i < team.length; i++){
-            FC[i] = team[i];
+            FC[i] = team[i]
+
+            
+            
 
         }
-        this.Team = FC;
+
+            if(FC[i] = team[i]){
+                this.Team = FC;
+            } else {
+                this.Team = team.clone();
+            }
+                
+        
 
 //        if(team == null){
 //            this.Team = new Player[0];
