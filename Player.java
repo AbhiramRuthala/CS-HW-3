@@ -82,15 +82,15 @@ public class Player {
         return name + " " + position + " " + minutes_played + " " + goals + " " + assists + " " + sog_percentage;
     }
 
-    // @Override
-    public boolean equals(Player other){
-        // return super.equals(other);
-        if (name.equals(other.getName()) && position.equals(other.getPosition()) && minutes_played == other.getMinutes() && sog_percentage == other.getSOG()){
-            return true;
+    @Override
+    public boolean equals(Object other){
+        if (other instanceof Player){
+            Player otherPlayer = (Player) other;
+            return otherPlayer.getName().equals(this.getName()) && otherPlayer.getPosition().equals(this.getPosition()) && otherPlayer.getMinutes() == this.getMinutes() && otherPlayer.getSOG() == this.getSOG();
+            
         } else {
             return false;
         }
-
     }
 
 }
