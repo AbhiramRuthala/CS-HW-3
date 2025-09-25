@@ -30,17 +30,18 @@ public class Team {
         return Team.clone();
     }
 
-    public void setTeam(Player[] Team) {
-        //deep copy
-        Player[] FC = new Player[Team.length];
+    public void setTeam(Player[] team) {
 
-        for(int i = 0; i < Team.length; i++){
-            FC[i] = Team[i];
+        if(team == null){
+            this.Team = new Player[0];
+        } else {
+            this.Team = new Player[team.length];
+            for (int i = 0; i < team.length; i++){
+                Player sense = team[i];
+                this.Team[i] = new Player(sense.getName(), sense.getPosition(), sense.getMinutes(),  sense.getGoals(), sense.getAssists(), sense.getSOG());
 
+            }
         }
-        this.Team = FC;
-
-        //this.Team = team;
     }
 
     //equals method
