@@ -192,7 +192,7 @@ public class Team {
 //        }
 
         for(Player player : Team){
-            System.out.println(player.getName());
+            //System.out.println(player.getName());
             for(int x = 0; x < thuggers.length; x++){
                 if(thuggers[x].getName().equalsIgnoreCase(player.getName())){
                     counter++;
@@ -202,10 +202,10 @@ public class Team {
         }
 
         if (counter == Team.length){
-            System.out.println(true);
+           // System.out.println(true);
             return true;
         } else {
-            System.out.println(false);
+           // System.out.println(false);
             return false;
         }
 
