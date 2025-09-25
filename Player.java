@@ -83,14 +83,16 @@ public class Player {
     }
 
     @Override
-    public boolean equals(Object other){
-        if (other instanceof Player){
-            Player otherPlayer = (Player) other;
-            return otherPlayer.getName().equals(this.getName()) && otherPlayer.getPosition().equals(this.getPosition()) && otherPlayer.getMinutes() == this.getMinutes() && otherPlayer.getSOG() == this.getSOG();
-            
-        } else {
+    public boolean equals(Object o){
+        
+        if(!(o instanceof Player)){
             return false;
+            
         }
+        
+        Player otherSeason = (Player) o;
+        return otherSeason.getName().equalsIgnoreCase(this.getName()) && otherSeason.getPosition().equalsIgnoreCase(this.getPosition()) && otherSeason.getMinutes() == this.getMinutes() && otherSeason.getSOG() == this.getSOG();
+
     }
 
 }
