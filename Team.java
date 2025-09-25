@@ -8,16 +8,22 @@ public class Team {
     private Player[] Team;
 
     public Team(Player[] team){
-        Player[] FC = new Player[team.length];
-        FC.getClass().getName();
+        //if(Team.length >0) {
 
-        for(int i = 0; i < team.length; i++){
-            FC[i] = team[i];
+        if(team == null){
+            this.Team = new Player[0];
+        } else {
+            this.Team = new Player[team.length];
+            for(int i = 0; i < team.length; i++){
+                Player sense = team[i];
+                this.Team[i] = new Player(sense.getName(), sense.getPosition(), sense.getMinutes(), sense.getGoals(), sense.getAssists(), sense.getSOG());
+            }
 
-            
-            
 
         }
+
+
+    }
 
             if(FC[0] == team[0]){
                 this.Team = FC;
