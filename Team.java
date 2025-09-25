@@ -1,7 +1,7 @@
 // Name: Abhiram Ruthala
 // Computing ID: kas4kj
 // HW 3 - Soccer
-// Resources used: https://medium.com/@AlexanderObregon/introduction-to-sorting-algorithms-in-java-a-beginners-guide-db522047effb, https://www.geeksforgeeks.org/dsa/sorting-algorithms/, ChatGPT 4 for Debugging, Claude Sonnet 4 for Debugging
+// Resources used: https://medium.com/@AlexanderObregon/introduction-to-sorting-algorithms-in-java-a-beginners-guide-db522047effb, https://www.geeksforgeeks.org/dsa/sorting-algorithms/, ChatGPT 4 for Debugging, Claude Sonnet 4 for Debugging, https://www.geeksforgeeks.org/java/overriding-equals-method-in-java/
 
 public class Team {
 
