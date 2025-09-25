@@ -183,7 +183,7 @@ public class Team {
         for(Player player : Team){
             System.out.println(player.getName());
             for(int x = 0; x < thuggers.length; x++){
-                if(thuggers[x].getName().contains(player.getName())){
+                if(thuggers[x].getName().equalsIgnoreCase(player.getName())){
                     counter++;
                 }
             }
