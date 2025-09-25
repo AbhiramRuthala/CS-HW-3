@@ -8,7 +8,7 @@ public class Team {
     private Player[] Team;
 
     public Team(Player[] team){
-        //if(Team.length >0) {
+
 
         if(team == null){
             this.Team = new Player[0];
@@ -23,21 +23,6 @@ public class Team {
         }
 
 
-    }
-
-            if(FC[0] == team[0]){
-                this.Team = FC;
-            } else {
-                this.Team = team.clone();
-            }
-                
-        
-
-//        if(team == null){
-//            this.Team = new Player[0];
-//        } else {
-//            this.Team = team.clone();
-//        }
 
     }
 
@@ -45,11 +30,11 @@ public class Team {
         return Team.clone();
     }
 
-    public void setTeam(Player[] team) {
+    public void setTeam(Player[] Team) {
         //deep copy
-        Player[] FC = new Player[team.length];
+        Player[] FC = new Player[Team.length];
 
-        for(int i = 0; i < team.length; i++){
+        for(int i = 0; i < Team.length; i++){
             FC[i] = Team[i];
 
         }
