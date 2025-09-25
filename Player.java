@@ -84,6 +84,10 @@ public class Player {
 
     @Override
     public boolean equals(Object o){
+
+        if(o == this){
+            return true;
+        }
         
         if(!(o instanceof Player)){
             return false;
