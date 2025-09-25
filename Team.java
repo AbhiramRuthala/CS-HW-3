@@ -6,7 +6,8 @@
 public class Team {
 
     private Player[] Team;
-
+    
+// Constructor for the Team class that uses a deep copy as a means to create a seperate list entity that doesn't tamper with the input entity and instantiate that to the private Player[] Team variable.
     public Team(Player[] team){
 
 
@@ -26,9 +27,13 @@ public class Team {
 
     }
 
+    
+// getTeam method that returns the Team.
     public Player[] getTeam() {
         return Team.clone();
     }
+
+    //setTeam follows a similar fashion to the constructor, doing a deep copy and providing a separate list entity of new Player items as based on the input instead of doing a shallow copy and potentially tampering with the input list and its components.
 
     public void setTeam(Player[] team) {
 
@@ -44,11 +49,13 @@ public class Team {
         }
     }
 
-    //equals method
+    //equals method that is to give it the capability of checking to see if something equals something else.
     @Override
     public boolean equals(Object other) {
         return super.equals(other);
     }
+
+    //toString method converts it into a readable string so that it is interpretable by the user instead of any random memory storage units that aren't the most useful in understanding the class.
 
     @Override
     public String toString() {
@@ -61,6 +68,8 @@ public class Team {
         return str;
     }
 
+    //Sog average takes all players SOG from the team array and divides that by the number of players on the team.
+
     public double SOGAverage(){
         double numerator = 0;
         for(int i = 0; i < Team.length; i++){
@@ -70,6 +79,8 @@ public class Team {
         return numerator/Team.length;
     }
 
+
+    //positionCount checks which players in a list of players play a certain position. If so, return the number of players that play that certain position.
     public int positionCount(String positionValue){
         int counter = 0;
         for(int i = 0; i < Team.length; i++){
@@ -96,6 +107,8 @@ public class Team {
 //        return newList;
 //
 //    }
+
+    //Sort function checks to put the list of playesr in descending order using minutes played as the sorting key. This is created in a separate list entity and uses a Bubble Selection where it goes through 2 loops to ensure that the items next to each other are greater on the left hand side and lower on the right hand side. then the new array is returned.
 
     public Player[] sort(){
 //        Player maxValue = new Player();
@@ -128,6 +141,8 @@ public class Team {
         return newList;
     }
 
+    //onTeam is a method that checks if some player is on the team by seeing if their name is on the list by using getName function of every element in the list and seeing if it matches the name passed as a parameter.
+
     public boolean onTeam(String nameSeason){
         boolean sense = false;
         for(int i = 0; i < Team.length; i++){
@@ -144,6 +159,8 @@ public class Team {
         return sense;
     }
 
+
+    //mostGoals checks for the player that scored the most goals on the team. we want to return the player that scored the most goals by checking every element, seeing which element equals the maximum number of goals by using getGoals(), and then returning that player variable.
     public Player mostGoals(){
         int goals = 0;
         Player newPlayer = null;
@@ -160,6 +177,8 @@ public class Team {
 
         return newPlayer;
     }
+
+    // equals function -- checks to see if 2 team lists are the same regardless of player order. this is checked by checking to see the player names on both lists and seeing if they ALL match. that would then return a true which would indicate that the two lists are the same.
 
     public boolean equals(Player[] thuggers){
         int counter = 0;
